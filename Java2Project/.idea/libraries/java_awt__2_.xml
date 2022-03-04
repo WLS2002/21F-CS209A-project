@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="java.awt (2)">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/java.awt.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="jar://$PROJECT_DIR$/lib/java.awt.jar!/" recursive="false" />
+  </library>
+</component>

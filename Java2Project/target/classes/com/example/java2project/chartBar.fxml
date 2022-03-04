@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.java2project.ChartBarController">
+    <children>
+        <SplitPane dividerPositions="0.3246492985971944" layoutX="255.0" layoutY="189.0" prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <HBox alignment="CENTER" layoutX="6.0" layoutY="544.0" maxHeight="54.0" minHeight="54.0" prefHeight="54.0" prefWidth="372.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0">
+                            <children>
+                                <Button layoutX="96.0" layoutY="19.0" mnemonicParsing="false" onAction="#ButtonStop" prefHeight="36.0" prefWidth="50.0" text="⏹" />
+                                <Button layoutX="14.0" layoutY="535.0" mnemonicParsing="false" onAction="#ButtonReverse" prefHeight="36.0" prefWidth="50.0" text="⏪" />
+                                <Button layoutX="97.0" layoutY="535.0" mnemonicParsing="false" onAction="#ButtonPause" prefHeight="36.0" prefWidth="50.0" text="⏸" />
+                                <Button layoutX="172.0" layoutY="535.0" mnemonicParsing="false" onAction="#ButtonPlay" prefHeight="36.0" prefWidth="50.0" text="▶" />
+                                <Button layoutX="243.0" layoutY="535.0" mnemonicParsing="false" onAction="#ButtonPlayFast" prefHeight="36.0" prefWidth="50.0" text="⏩" />
+                            </children>
+                        </HBox>
+                        <Slider fx:id="slider" layoutX="67.0" layoutY="502.0" onDragDetected="#updateSliderValue" prefHeight="45.0" prefWidth="250.0" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="67.0" AnchorPane.rightAnchor="67.0" />
+                        <CheckBox layoutX="48.0" layoutY="49.0" mnemonicParsing="false" text="CheckBox" />
+                        <TextField layoutX="72.0" layoutY="159.0" />
+                        <Button layoutX="328.0" layoutY="502.0" mnemonicParsing="false" onAction="#RightClick" prefHeight="48.0" prefWidth="50.0" text="→" textAlignment="CENTER" AnchorPane.bottomAnchor="51.0" AnchorPane.rightAnchor="10.0" />
+                        <Button layoutX="6.0" layoutY="502.0" mnemonicParsing="false" onAction="#LeftClick" prefHeight="48.0" prefWidth="50.0" text="←" textAlignment="CENTER" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="10.0" />
+                        <Button layoutX="127.0" layoutY="463.0" mnemonicParsing="false" onAction="#ScreenShot" text="Save Picture" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <TabPane prefHeight="598.0" prefWidth="804.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <tabs>
+                                <Tab text="PieChart">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                            <children>
+                                                <PieChart fx:id="pieChart" prefHeight="521.0" prefWidth="804.0" title="test123" AnchorPane.bottomAnchor="77.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </Tab>
+                                <Tab text="BarChart">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                            <children>
+                                                <BarChart fx:id="barChart" prefHeight="513.0" prefWidth="804.0" title="test" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <xAxis>
+                                                        <NumberAxis side="LEFT" />
+                                                    </xAxis>
+                                                    <yAxis>
+                                                        <CategoryAxis side="BOTTOM" />
+
+                                                    </yAxis>
+                                                </BarChart>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </Tab>
+                                <Tab text="LineChart">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                            <children>
+                                                <LineChart fx:id="lineChart" prefHeight="553.0" prefWidth="804.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <xAxis>
+                                                        <CategoryAxis side="BOTTOM" />
+                                                    </xAxis>
+                                                    <yAxis>
+                                                        <NumberAxis side="LEFT" />
+                                                    </yAxis>
+                                                </LineChart>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </Tab>
+                                <Tab text="BubbleChart">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                            <children>
+                                                <BubbleChart fx:id="bubbleChart" animated="false" prefHeight="546.0" prefWidth="804.0" title="test" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <xAxis>
+                                                        <NumberAxis side="BOTTOM" />
+                                                    </xAxis>
+                                                    <yAxis>
+                                                        <NumberAxis side="LEFT" />
+                                                    </yAxis>
+                                                </BubbleChart>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </Tab>
+                            </tabs>
+                        </TabPane>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+        <Label fx:id="caption" opacity="0.89" textAlignment="CENTER" />
+    </children>
+</AnchorPane>
+

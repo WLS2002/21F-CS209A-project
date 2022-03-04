@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="java.awt">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Downloads/java.awt-1.0.5.jar!/" />
+    </SOURCES>
+  </library>
+</component>
